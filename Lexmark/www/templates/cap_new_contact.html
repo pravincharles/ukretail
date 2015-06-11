@@ -1,0 +1,69 @@
+  <ion-header-bar class="bar-dark">
+
+<button class="button button-icon" ng-click="newTask()">
+        Retake
+      </button>
+
+    <h1 class="title">New Contact</h1>
+
+    <!-- New Task button-->
+     <button class="button button-icon" ng-click="newTask()">
+        Save
+      </button>
+    </ion-header-bar>
+
+    <ion-content class="Contact_bg">
+	<form ng-submit="contactList(display)">
+		<div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">First Name</span>
+    <input type="text" id="content" placeholder="Cathy">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Last Name</span>
+    <input type="text" id="content" placeholder="Hugus">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Phone</span>
+    <input type="text" id="content" placeholder="996 5425 3411">
+  </label>
+   <label class="item item-input item-stacked-label">
+    <span class="input-label">Mobile</span>
+    <input type="text" id="content" placeholder="996 5425 3411">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Email ID</span>
+    <input type="text" id="content" placeholder="cathy@cisco.com">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Address1</span>
+    <input type="text"  id="content" placeholder="AAA">
+  </label>
+   <label class="item item-input item-stacked-label">
+    <span class="input-label">Address2</span>
+    <input type="text" id="content" placeholder="AAA">
+  </label>
+   <label class="item item-input item-stacked-label">
+    <span class="input-label">Company</span>
+    <input type="text" id="content" placeholder="Cisco Inc">
+  </label>
+</div>		
+	</form>
+   
+
+    </ion-content>
+<script id="new-task.html" type="text/ng-template">
+
+    <!-- Modal content area -->
+    <ion-content>
+	
+      <form ng-submit="createTask(task)">
+          <button type="submit" class="button button-block button-positive">Saved Successfully</button>
+      </form>
+
+    </ion-content>
+
+</script>
+
+
+

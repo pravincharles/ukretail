@@ -1,0 +1,19 @@
+<ion-content class="login-bg" >
+<div class="row" style = "padding-top:40px !important">
+  <div class="col-20"></div>
+  <div class="col-60 center"><img class = "capone_logo_img" src="img/Lexmark_Logo.png" title="Lexmark Logo"/></div>
+  <div class="col-20"></div>
+  </div>
+  <form >
+  <div class="login_form">
+  <h2>Login</h2>
+  <label style="display:block">
+    <input class="rounded" type="text" placeholder="Username" ng-model="user.uid">
+  </label>
+  <label style="display:block">
+    <input class="rounded" type="password" placeholder="Password" ng-model="user.pwd">
+  </label>
+  <p class="login_links"><span ng-click="doLogin(user)"><a href="" class="login_btn">Login</a></span></p>  
+</div>   
+  </form>
+ </ion-content>

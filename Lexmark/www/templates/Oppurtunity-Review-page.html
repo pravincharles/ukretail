@@ -1,0 +1,108 @@
+
+
+<ion-header-bar class="bar-dark">
+    
+    <button class="button button-icon" ng-click="goBack()">
+        <i>Back</i>
+    </button>
+    <h1 class="title">Opportunity Review</h1>
+    
+    <!-- New Task button-->
+    <button class="button button-icon" ng-click="editOppurtunityReview()">
+        <i>Edit</i>
+    </button>
+</ion-header-bar>
+
+<ion-content class="background_img">
+    <form ng-submit="contactList(display)">	<div class="list">
+        <ul>
+            
+            <a class="item no-item-avatar" >
+                <h1 class="Middlealign wd_txt">Western Union AS90000 Deal</h1>
+                <div class="wu_bg"><div class="marginTp25 com_txt">	<p class="boldBlueTxt flt-left paddingRight50">Company</p>
+                    <p class="flt-left">Western Union Inc.</p>
+                </div>
+                <div class="revn_txt clrbth"><p class="boldBlueTxt flt-left paddingRight50">Revenue</p>
+                    <p class="flt-left bold">2,500,000.00 USD</p>
+                </div></div>
+            </a>
+            
+            <a class="item no-item-avatar" >
+                <div>
+                    <div>			<p class="boldBlueTxt flt-left paddingRight38">Close Date</p>
+                        <p class="flt-left">09/30/2014</p>
+                    </div>		<div class="clrbth PosTp10">			<p class="boldBlueTxt flt-left paddingRight32">Sales Stage</p>
+                        <p class="flt-left bold redtxt">Stage 3 30%</p>
+                        <p>-Proposal</p>	</div>				</div>
+            </a>
+            
+            
+            <a class="item no-item-avatar redBg  ht85" >
+                <div class="Width100">
+                    <p class="prodTxt paddingRight38 wid70 fnt95">Products</p>
+                    <p class="flt-right contactsImg martp-58">
+                    <img width="87" height="84" alt="Contact" src="img/contact1.png"></img>
+                    </p>
+                </div>
+            </a>
+            <a class="item no-item-avatar bdisp ht85" >
+                
+                <div class="Arrow-lft"></div>
+                <div class=" Middlealign normalblue pager">02/20</div>
+                <div class="Arrow-right"></div>
+                
+            </a>
+            <div class="slide1 slide_common martp85">
+                <p class="ptype1">Product Type</p>
+                <input type="text" class="dtype margin-left19 txt_bx bdrbtm-blue" value="Deposit" />
+                <img src="img/drop_down_arrow.png" class="darrow_img"/>
+                <p class="ptype1">Product Name</p>
+                <input type="text" class="dtype margin-left19 txt_bx bdrbtm-blue" value="FDI"/>
+                <img src="img/drop_down_arrow.png" class="darrow_img" />
+                
+                </ul>
+    </div>
+    </form>
+    
+    
+</ion-content>
+
+
+
+
+
+
+<script id="new-task.html" type="text/ng-template">
+    
+    <div class="modal modal_retake modal_retake1 bluebg">
+    
+    <!-- Modal content area -->
+    <ion-content>
+    
+    <ul class="list whitetxt">
+    
+    <li class="item item-checkbox item-retake centeralign whitetxt padding-left4"> 
+    Contact Details
+    </li>
+    
+    <li class="cat-txt center">
+    Robert - Director
+    </li>	
+    <li class="cat-txt center">906 8765 342 </li>
+    <li class="cat-txt center">robert_6_westernunion.com</li>
+    
+    
+    
+    
+    </ul>
+    <div class="bdr-tp">
+    <div class="padding-tp10 padding-btm10 retake_submit padding-lt15 padding-rt15 whitetxt width50 ht85">Cancel</div>
+    <div class="padding-tp10 padding-btm10 retake_flag_btn whitetxt padding-lt15 padding-rt15">Call</div>
+    </div>
+    
+    
+    </ion-content>
+    
+    </div>
+    
+    </script>

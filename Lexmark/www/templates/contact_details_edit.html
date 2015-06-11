@@ -1,0 +1,111 @@
+
+<div ng-controller="SaveContactCtrl">
+<ion-header-bar class="bar-dark">
+
+<button class="button button-icon" ng-click="goBack()">
+        Back
+</button>
+    <h1 class="title">Edit Contact</h1>
+
+<button class="button button-icon" ng-click="submitContact()" >
+        Save
+</button>
+</ion-header-bar>
+
+ <ion-content class="background_img">
+	<form name="ContactForm" id="ContactFormRecord" class="bg_transp" novalidate> 
+	<div class="list">
+  <label class="item-input item-stacked-label">
+    <span class="input-label">First Name</span>
+    <input type="text" class="content" id="firstname" placeholder="" ng-model="contactdetails.FirstName"> </input>
+	<input type="text" id="contactid"  ng-model="contactdetails.ContactId" style="width:0px;height:0px">
+  </label>
+  <label class="item-input item-stacked-label">
+    <span class="input-label">Last Name</span>
+    <input type="text" class="content" id="lastname" placeholder="" ng-model="contactdetails.LastName" </input>
+  </label>
+  <label class="item-input item-stacked-label">
+    <span class="input-label">Phone</span>
+    <input type="text" class="content" id="phone" placeholder="" ng-model="contactdetails.WorkPhone"> </input>
+  </label>
+   <label class="item-input item-stacked-label">
+    <span class="input-label">Mobile</span>
+    <input type="text" class="content" id="mobile" placeholder="" name="mobile" ng-model="contactdetails.CellularPhone"> </input>
+  </label>
+  <label class="item-input item-stacked-label">
+    <span class="input-label">Email ID</span>
+    <input type="text" class="content" id="emailid" placeholder="" ng-model="contactdetails.EmailAddress"> </input>
+  </label>
+  <label class="item-input item-stacked-label">
+    <span class="input-label">Address1</span>
+    <input type="text" class="content"  id="subaddress" placeholder="" ng-model="contactdetails.PrimaryPersonalStreetAddress"> </input>
+  </label>
+   <label class="item-input item-stacked-label">
+    <span class="input-label">Address2</span>
+    <input type="text"  class="content" id="mainaddress" placeholder="" ng-model="contactdetails.PrimaryPersonalCity"> </input>
+  </label>
+   <label class="item-input item-stacked-label">
+    <span class="input-label">Company</span>
+    <input type="text" class="content" id ="company" placeholder="" ng-model="contactdetails.AccountName"> </input>
+  </label>
+</div>		
+	</form> 
+    </ion-content>
+</div>
+
+
+
+<script id="new-task.html" type="text/ng-template">
+
+  <div class="modal modal_retake">
+
+    <ion-content>
+	<h2 class="h2_retake"> 
+       Existing Potential Contact
+  </h2>
+     <ul class="list scroll_pop">
+
+  
+	 <li class="item item-checkbox">
+     <label class="checkbox check_retake">
+       <input type="checkbox">
+     </label>
+     Cathy W Huges<p>902 999 6786</p>
+  </li>
+   <li class="item item-checkbox">
+     <label class="checkbox check_retake">
+       <input type="checkbox">
+     </label>
+     Cathy William Huges <p>cathyhuges_87@gmail.com</p>
+  </li>
+<li class="item item-checkbox">
+     <label class="checkbox check_retake">
+       <input type="checkbox">
+     </label>
+     Cathy William H <p>903 6367866</p>
+  </li>
+  <li class="item item-checkbox">
+     <label class="checkbox check_retake">
+       <input type="checkbox">
+     </label>
+     Cathy William H <p>903 6367866</p>
+  </li>
+
+<li>
+
+  </li>
+  </ul>
+<div class="retake_submit">
+    <button class="button icon-left retake_cancel">Cancel</button></div>
+<div class="retake_flag_btn">
+ <button class="button icon-left retake_flag">Flag It</button></div>
+    </ion-content>
+
+  </div>
+
+</script>
+
+
+
+
+

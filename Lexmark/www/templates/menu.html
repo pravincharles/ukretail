@@ -1,0 +1,139 @@
+
+<ion-side-menus>
+{% raw %}
+
+  <ion-pane ion-side-menu-content>
+    <!--<ion-nav-bar class="bar-stable">
+      <ion-nav-back-button class="button-clear"><i class="icon ion-chevron-left"></i> Back</ion-nav-back-button>
+    </ion-nav-bar> -->
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+  </ion-pane>
+
+
+
+
+  <!-- side menu -->
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-dark" style="border-right:none!important">
+      <h1 class="capone_log"><img src="img/capone_logo_84h.png" title="CapitalOne Logo" width="80%" height="95%"/></h1>
+      <span class="menu_log">Menu</span>
+    </ion-header-bar>
+
+    <ion-content scroll="true" class="side_menu_bg">
+      <ion-list>
+        <ion-item nav-clear menu-close class="side_icon" href="#/home/dash">
+         <!-- <img src="img/opportunity_unselected.png" width='30'> --><span class = "glyphicon glyphicon-dashboard" style="color:black;font-weight: 600"> Dashboard </span> 
+        </ion-item>	  
+        <ion-item  nav-clear menu-close class="side_icon" ng-controller="ContactPopupCtrl" ng-click="getContacts()">
+         <!-- <img src="img/contacts_unselected.png"  width='30'> --><span class = "glyphicon glyphicon-user" style="color:black;font-weight: 600"> Contact </span>
+        </ion-item>    
+        <ion-item nav-clear menu-close class="side_icon" href="#/home/oppurtunity">
+         <!-- <img src="img/opportunity_unselected.png" width='30'> --><span class = "glyphicon glyphicon-usd" style="color:black;font-weight: 600"> Opportunity </span> 
+        </ion-item>
+        <ion-item  nav-clear menu-close class="side_icon"  href="#/home/company">
+          <!-- <img src="img/company_unselected.png" width='30'> --><span class= "glyphicon glyphicon-briefcase"style="color:black;font-weight: 600"> Company </span>
+        </ion-item>
+        <ion-item  nav-clear menu-close class="side_icon" ng-click="scanCard()">
+         <!-- <img src="img/scancard_unselected.png" width='30'> --><span class = "glyphicon glyphicon-search" style="color:black;font-weight: 600"> ScanBusinessCard </span>
+        </ion-item>
+         <ion-item  class="side_icon" href="#/home/activity">
+         <!-- <img src="img/appointment_unselected.png" width='30'> --><span class = "glyphicon glyphicon-pencil" style="color:black;font-weight: 600"> Activities </span>
+        </ion-item>
+        <ion-item  class="side_icon" href="#/home/aroundme">
+        <!--  <img src="img/aroundme_unselected.png" width='30'> --><span class = "glyphicon glyphicon-screenshot" style="color:black;font-weight: 600"> AroundMe </span>
+        </ion-item>
+        <ion-item  class="side_icon" href="#/home/sr">
+         <!-- <img src="img/service_request_unselected.png" width='30'> --><span class = "glyphicon glyphicon-wrench" style="color:black;font-weight: 600"> ServiceRequest </span>
+        </ion-item>
+        <ion-item  class="side_icon" href="#/home/device" >
+         <!-- <img src="img/widgets_unselected.png" width='30' > --><span  class = "glyphicon glyphicon-barcode" style="color:black; font-weight: 600"> Device </span>
+        </ion-item>
+        <ion-item  class="side_icon" href="#/home/claims" >
+         <!-- <img src="img/widgets_unselected.png" width='30' > --><span  class = "glyphicon glyphicon-gbp" style="color:black; font-weight: 600"> Claims </span>
+        </ion-item>
+        <ion-item  class="side_icon">
+         <!-- <img src="img/settings_unselected.png" width='30'> --><span  class = "glyphicon glyphicon-check" style="color:black;font-weight: 600"> Settings </span>
+        </ion-item>
+        <ion-item  class="side_icon" ng-click="logout()">
+         <!-- <img src="img/logout_unselected.png" width='30'> --><span class="glyphicon glyphicon-log-out" style="color:black;font-weight: 600"> Logout </span>
+        </ion-item>
+         <div class="mobile_srm_logo">
+         <img src="img/mobilr_srm_logo.png" width='220'> 
+         </div>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
+
+        
+<script id="new-task.html" type="text/ng-template" ng-controller="TodoCtrl">
+  <div class="modal modal_addtask">
+    <ion-content>
+      <form ng-submit="createTask(task)">
+        <div class="add_menu">
+            <div class="phn_book" ng-click="listPhoneContacts()"> <img src="img/phonebook.png"/> <p>Phonebook</p></div>
+            <div class="scan_card" ng-click="scanBusinessCard()"> <img src="img/scancard.png"/> <p> Scan Business Card</p></div>
+            <div class="manual_im" ng-click="enterBusinessContact()"> <img src="img/manually.png"/><p> Enter Manually</p></div>
+            <div class="cancel_menu" ng-click="closeContactPopup()"> <img src="img/Cnacel.png"/> <p> Cancel&nbsp;</p></div> 
+        </div>
+      </form>
+    </ion-content>
+  </div>
+</script>
+
+<script id="opportunitymodal.html" type="text/ng-template" ng-controller="TodoCtrl">
+  <div class="modal modal_addtask">
+    <ion-content>
+      <form ng-submit="createTask(task)">
+         <div class="add_menu">
+            <div class="phn_book" ng-click="alertDevelopment()"> <img src="img/alphabetic.png"/> <p>Alphabetic</p></div>
+            <div class="scan_card" ng-click="alertDevelopment()"> <img src="img/close_date.png"/> <p>&nbsp;&nbsp;Close Date</p></div>
+            <div class="manual_im" ng-click="alertDevelopment()">  <img src="img/revenue.png"/> <p>Revenue</p></div>
+            <div class="cancel_menu" ng-click="closeOpportunityModal()"> <img src="img/Cnacel.png"/> <p> Cancel&nbsp;</p></div> 
+        </div>
+      </form>
+    </ion-content>
+  </div>
+</script>
+            
+<script id="companymodal.html" type="text/ng-template" ng-controller="TodoCtrl">
+  <div class="modal modal_addtask">
+    <ion-content>
+      <form ng-submit="createTask(task)">
+         <div class="add_menu">
+            <div class="phn_book" ng-click="alertDevelopment()"> <img src="img/alphabetic.png"/> <p>Alphabetic</p></div>
+            <div class="scan_card" ng-click="alertDevelopment()"> <img src="img/close_date.png"/> <p>&nbsp;&nbsp;Close Date</p></div>
+            <div class="manual_im" ng-click="alertDevelopment()">  <img src="img/revenue.png"/> <p>Revenue</p></div>
+            <div class="cancel_menu" ng-click="closeCompanyModal()"> <img src="img/Cnacel.png"/> <p> Cancel&nbsp;</p></div> 
+        </div>
+      </form>
+    </ion-content>
+  </div>
+</script>
+
+
+ <script id="contact_popup.html" type="text/ng-template" ng-controller="CompanyDetailsCtrl">
+
+  <div class="modal modal_editpop">
+
+  
+
+    <!-- Modal content area -->
+    <ion-content>
+  
+      <form ng-submit="createTask(task)">
+        <div class="add_menu">
+            <div class="via_mail" ng-click="showMail()"><img src="img/via_mail.png"/> <p>Via Mail</p></div>
+            <div class="via_calen" ng-click="showCalendar()"><img src="img/via_calender.png"/><p> Via calender</p></div>
+            
+
+        </div>
+      </form>
+
+    </ion-content>
+
+  </div>
+
+</script>
+            
+  

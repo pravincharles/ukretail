@@ -1,0 +1,40 @@
+<div ng-controller='dvctrl'>
+<ion-header-bar class="bar-dark">
+    
+    <button class="button button-icon" ng-click="toggleProjects()">
+        <i class="icon ion-navicon"></i>
+    </button>
+    
+    <h1 class="title">Device</h1>
+    
+  <button class="button button-icon" ng-click="barscan()">
+        <i class="icon oppurtunity_img"></i>
+    </button>
+</ion-header-bar>
+<ion-content class="background_img">
+
+<div class="panel-heading" style="background-color : White; border-color: grey; color : black;font-weight:bold">Device List</div>
+<form class="bg_transp" ng-submit="contactList(display)">
+     <div class="list">
+        <ul>
+        
+        <a class="item no-item-avatar" data-ng-repeat="bardev in bardev" ng-click="bardevdetail($index)">
+            <div>
+            <h2 style = "font-weight : bold"><span style = "color : black; font-weight : bold">Asset # :</span> {{bardev.AssetNumber}}</h2>
+            <h2 style = "font-weight : bold"><span style = "color : black; font-weight : bold">Serial # :</span> {{bardev.SerialNumber}}</h2>
+
+            <h2 style = "font-weight : bold"><span style = "color : black; font-weight : bold">Product :</span> {{bardev.ProductName}}</h2>
+
+            <h2 style = "font-weight : bold"><span style = "color : black; font-weight : bold">Product Model :</span> {{bardev.LXKProductModelName}}</h2>
+
+            <p class="rgt_arrow arrow_prop"></p>        
+            </div>        
+        </a>
+        
+        </ul>
+        </div>
+        <div ng-include='dvcdiv'></div>
+    </form> 
+
+</ion-content>
+</div>

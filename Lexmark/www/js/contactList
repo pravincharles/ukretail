@@ -1,0 +1,174 @@
+{
+   "count":14,
+   "CAPContact":[
+      {
+         "ActiveStatus":"Y",
+         "PersonalContact":"N",
+         "PartyUId":"0-1",
+         "EmailAddress":"sadmin@siebel.com",
+         "FirstName":"Siebel",
+         "JobTitle":"Sys Admin",
+         "LastName":"Administrator"
+      },
+      {
+         "PrimaryPersonalState":"CA",
+         "PrimaryPersonalPostalCode":"423432",
+         "ListOfCAPContact_Personal Address":[
+            {
+               "PersonalCountry":"USA",
+               "PersonalAddressName":"78745 Forest Court, Sacremento, CA",
+               "IsPrimaryMVG":"Y",
+               "PersonalStreetAddress":"78745 Forest Court",
+               "PersonalPostalCode":"423432",
+               "PersonalState":"CA",
+               "PersonalCity":"Sacremento"
+            }
+         ],
+         "PrimaryPersonalStreetAddress":"78745 Forest Court",
+         "LastName":"Ashish",
+         "ActiveStatus":"Y",
+         "PrimaryPersonalCity":"Sacremento",
+         "PersonalContact":"N",
+         "PrimaryPersonalCountry":"USA",
+         "PartyUId":"1-7E6",
+         "EmailAddress":"sadmin@siebel.com",
+         "FirstName":"Sharma",
+         "PrimaryAddressName":"78745 Forest Court, Sacremento, CA",
+         "PrimaryCountry":"USA",
+         "JobTitle":"Sys Admin",
+         "PrimaryCity":"Sacremento"
+      },
+      {
+         "ActiveStatus":"Y",
+         "PersonalContact":"N",
+         "PartyUId":"0-3FTZJ",
+         "FirstName":"Guest",
+         "JobTitle":"test",
+         "LastName":"Channel Partner"
+      },
+      {
+         "ActiveStatus":"Y",
+         "PersonalContact":"N",
+         "PartyUId":"0-3FTZ9",
+         "FirstName":"Guest",
+         "LastName":"Customer"
+      },
+      {
+         "ActiveStatus":"Y",
+         "PersonalContact":"N",
+         "PartyUId":"0-57T73",
+         "FirstName":"Proxy",
+         "LastName":"Employee"
+      },
+      {
+         "ActiveStatus":"Y",
+         "PersonalContact":"N",
+         "PartyUId":"0-55RO2",
+         "FirstName":"ERM",
+         "LastName":"Guest"
+      },
+      {
+         "PrimaryPersonalState":"CA",
+         "PrimaryPersonalPostalCode":"43434",
+         "ListOfCAPContact_Personal Address":[
+            {
+               "PersonalCountry":"USA",
+               "PersonalAddressName":"101 Washington Blvd, SanDiego, CA",
+               "IsPrimaryMVG":"Y",
+               "PersonalStreetAddress":"101 Washington Blvd",
+               "PersonalPostalCode":"43434",
+               "PersonalState":"CA",
+               "PersonalCity":"SanDiego"
+            }
+         ],
+         "PrimaryPersonalStreetAddress":"101 Washington Blvd",
+         "LastName":"Jackson",
+         "ActiveStatus":"Y",
+         "PrimaryPersonalCity":"SanDiego",
+         "PersonalContact":"N",
+         "PrimaryPersonalCountry":"USA",
+         "PartyUId":"1-5LO1",
+         "PrimaryAddressName":"101 Washington Blvd, SanDiego, CA",
+         "FirstName":"VanPierse",
+         "PrimaryCountry":"USA",
+         "PrimaryCity":"SanDiego"
+      },
+      {
+         "ActiveStatus":"Y",
+         "PersonalContact":"N",
+         "PartyUId":"1-8HV",
+         "EmailAddress":"sadmin@siebel.com",
+         "FirstName":"Saravanan",
+         "JobTitle":"Sys Admin",
+         "LastName":"Mahesh"
+      },
+      {
+         "PrimaryPersonalState":"NY",
+         "PrimaryPersonalPostalCode":"70322",
+         "ListOfCAPContact_Personal Address":[
+            {
+               "PersonalCountry":"USA",
+               "PersonalAddressName":"204 Park Ave, Nutley, NY",
+               "IsPrimaryMVG":"Y",
+               "PersonalStreetAddress":"204 Park Ave",
+               "PersonalPostalCode":"70322",
+               "PersonalState":"NY",
+               "PersonalCity":"Nutley"
+            }
+         ],
+         "PrimaryPersonalStreetAddress":"204 Park Ave",
+         "LastName":"Pravin",
+         "ActiveStatus":"Y",
+         "PrimaryPersonalCity":"Nutley",
+         "PersonalContact":"N",
+         "PrimaryPersonalCountry":"USA",
+         "PartyUId":"1-70Y",
+         "EmailAddress":"sadmin@siebel.com",
+         "FirstName":"Charles",
+         "PrimaryAddressName":"204 Park Ave, Nutley, NY",
+         "PrimaryCountry":"USA",
+         "JobTitle":"Sys Admin",
+         "PrimaryCity":"Nutley"
+      },
+      {
+         "ActiveStatus":"Y",
+         "PersonalContact":"N",
+         "PartyUId":"0-5H85G",
+         "FirstName":"Universal",
+         "LastName":"Queue"
+      },
+      {
+         "ActiveStatus":"Y",
+         "PersonalContact":"N",
+         "PartyUId":"1-ITM2",
+         "EmailAddress":"surya.com",
+         "FirstName":"Ramesh",
+         "LastName":"Surya"
+      },
+      {
+         "ActiveStatus":"Y",
+         "PersonalContact":"N",
+         "PartyUId":"1-84M",
+         "EmailAddress":"sadmin@siebel.com",
+         "FirstName":"Kumar",
+         "JobTitle":"Sys Admin",
+         "LastName":"Vinoth"
+      },
+      {
+         "ActiveStatus":"Y",
+         "PersonalContact":"N",
+         "PartyUId":"1-7RE",
+         "EmailAddress":"sadmin@siebel.com",
+         "FirstName":"Sinare",
+         "JobTitle":"Sys Admin",
+         "LastName":"Vishal"
+      },
+      {
+         "ActiveStatus":"Y",
+         "PersonalContact":"N",
+         "PartyUId":"1-IK1H",
+         "FirstName":"senthil",
+         "LastName":"murugan"
+      }
+   ]
+}

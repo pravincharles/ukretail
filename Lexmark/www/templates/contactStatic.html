@@ -1,0 +1,44 @@
+<ion-header-bar class="bar-dark">
+    
+    <button class="button button-icon" ng-click="toggleProjects()">
+        <i class="icon ion-navicon"></i>
+    </button>
+    
+    <h1 class="title">Contact</h1>
+    
+    <!-- New Task button-->
+    <button class="button button-icon" ng-click="newTask()">
+        <i class="icon icon_addcnt"></i>
+    </button>
+</ion-header-bar>
+
+<ion-content class="background_img">
+    <form class="bg_transp" ng-submit="contactList(display)">
+        <div class="bar bar-header item-input-inset">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios7-search placeholder-icon search_icon"></i>
+                <input type="search" class="rounded_addtask" placeholder="Search"/>
+            </label>
+            <button class="button button-icon" ng-click="showCompanyModal()">
+                <i class="icon search_img"></i>
+            </button>
+        </div>
+        <div class="list">
+            <ul>
+                
+                <a class="item no-item-avatar" data-ng-repeat="staticContact in staticContactList" ng-click="showStaticContactDetails()">
+                    <div>
+                        <h2>{{staticContact.Data1}}</h2>
+                        <p>{{staticContact.Data2}}</p>
+                        <p>{{staticContact.Data3}}</p>
+                        <p>{{staticContact.Data4}}</p>
+                        <p class="rgt_arrow arrow_prop"></p>
+                    </div>		  
+                </a>
+                
+            </ul>
+        </div>
+    </form>
+    
+</ion-content>
+

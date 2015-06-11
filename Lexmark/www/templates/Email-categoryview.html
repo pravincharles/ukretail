@@ -1,0 +1,102 @@
+
+<!--  
+   Contents of selected menu item
+  -->    
+  <ion-header-bar class="bar-dark">
+
+  <button class="button button-icon white_arrow" ng-click="goBack()" >
+ <span>    Back
+  </span></button>
+
+    <h1 class="title">Email</h1>
+
+    <!-- New Task button-->
+    
+    </ion-header-bar>
+
+    <ion-content class="background_img">
+	<form ng-submit="contactList(display)">
+		<div class="bar bar-header item-input-inset email_cate_bg">
+			Categories		</div>
+		<div class="list">
+		<ul>
+		
+		<a class="item" ng-click="showEmailAlertModal()">
+			<div class="rgt_arrow email_cnt">
+			<h2>New Blank template</h2>
+			<p class="margin-right7">New blank mail, to compose mail concisely and clearly according to the requirement. </p>	
+			</div>		  
+		</a>
+		
+		<a class="item" ng-click="showEmailAlertModal()">
+			<div class="rgt_arrow email_cnt">
+			<h2>Asking for an appointment</h2>
+			<p class="margin-right7">Would it be possible to meet on (date) at your / our offices to discuss...?</p>
+			</div>
+		</a>
+		
+		
+		<a class="item" ng-click="showEmailAlertModal()">
+			<div class="rgt_arrow email_cnt">
+			<h2>Writing to someone you don't ....</h2>
+			<p class="margin-right7">I am... and I would be interested to meet you to discuss....I would be grateful if you could indicate a convenient time to meet.....</p>
+			</div>	
+		</a>
+		
+		
+		<a class="item" ng-click="showEmailAlertModal()">
+			<div class="rgt_arrow email_cnt">
+			<h2>Asking for confirmation</h2>
+			<p class="margin-right7">Please confirm if this date and time is suitable / convenient for you. (neutral) Can you let me know if this is OK for you?</p>	
+			</div>
+		</a>
+		
+		
+		<a class="item" ng-click="showEmailAlertModal()">
+			<div class="rgt_arrow email_cnt">
+			<h2>Suggesting a time</h2>
+			<p class="margin-right7">Would Tuesday suit you? Would you be available on tuesday? (informal) What about...? Let's say...</p>
+			</div>
+		</a>
+		
+		</div>
+	</form>
+ 
+ </ion-content>
+
+
+
+<script id="emailalert.html" type="text/ng-template">
+
+  <div class="modal modal_retake modal_email bluebg">   
+    <ion-content>
+    <h2 class=" email_cat_h2 item item-checkbox item-retake centeralign whitetxt padding-left4"> 
+       Writing to someone you dont know
+  </h2>
+	
+     <ul class="list whitetxt scroll_add">
+
+<li class="cat-txt">
+
+I am... and I would be interested to meet you to discuss....I would be grateful if you could indicate a convenient time to meet.....during this week.
+
+</li>	
+<li class="cat-txt">I look forward to hearing from you. </li>
+<li class="cat-txt">Regards</li>
+<li class="cat-txt">....</li>
+<li class="cat-txt margin-top0">Capital One</li>
+
+
+
+</ul>
+<div class="bdr-tp">
+<div class="padding-tp10 padding-btm10 retake_submit padding-lt15 padding-rt15 whitetxt width50 ht85" ng-click="hideEmailAlertModal()">Cancel</div>
+<div class="padding-tp10 padding-btm10 retake_flag_btn whitetxt padding-lt15 padding-rt15" ng-click="alertDevelopment()">Proceed</div>
+</div>
+  
+
+    </ion-content>
+
+  </div>
+
+</script>

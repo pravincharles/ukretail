@@ -1,0 +1,98 @@
+<div>
+<ion-header-bar class="bar-dark">
+    
+    <button class="button button-icon" ng-click="goBack()">
+        <i>Back</i>
+    </button>
+    <h1 class="title">Activity Debrief</h1>
+    
+    <!-- New Task button-->
+    <button class="button button-icon" ng-click = "showactiModal()">
+        <i>Signature</i>
+    </button>
+</ion-header-bar>
+<ion-content class="background_img">
+<div class="row" style="margin-left: 0px !important">
+  <div class="col">
+<div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Asset Tag</span>
+    <input type="text" value = {{bardetail.AssetId}}>
+  </label>
+ </div>
+</div>
+  <div class="col">
+<div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Serial Number </span>
+    <input type="text" value = {{bardetail.SerialNumber}}>
+  </label>
+ </div>
+
+  </div>
+</div>
+<div class="row" style="margin-left: 0px !important">
+  <div class="col">
+<div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Meter Read- Color</span>
+    <input type="text" value = {{bardetail.AssetId}}>
+  </label>
+ </div>
+</div>
+  <div class="col">
+<div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Meter Read-Mono</span>
+    <input type="text" value = {{bardetail.SerialNumber}}>
+  </label>
+ </div>
+
+  </div>
+</div>
+<div class="row" style="margin-left: 0px !important">
+  <div class="col">
+<div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">latitude</span>
+    <input type="text" value = {{bardetail.AssetId}}>
+  </label>
+ </div>
+</div>
+  <div class="col">
+<div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Longitude</span>
+    <input type="text" value = {{bardetail.SerialNumber}}>
+  </label>
+ </div>
+
+  </div>
+</div>
+<div class="row" style="margin-left: 0px !important">
+  <div class="col">
+<div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Status</span>
+    <input  type="text" value = {{bardetail.Status}}>
+  </label>
+ </div>
+</div>
+  <div class="col">
+<div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Price Type </span>
+    <input  type="text" value = {{bardetail.PriceType}}>
+  </label>
+ </div>
+
+  </div>
+</div>
+<div id='signpad'>
+<canvas id='signatureCanvas'  style='border: 1px solid black; Width:"50%"'></canvas>
+<div class='button-bar'>
+              <a class='button button-energized' ng-click='clearCanvas()'>Clear</a>
+              <a class='button button-balanced' ng-click='saveCanvas()'>Save</a>
+          </div></div>
+</ion-content>
+</div>

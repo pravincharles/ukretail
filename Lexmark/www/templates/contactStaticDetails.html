@@ -1,0 +1,72 @@
+<div ng-controller="SocialNetworkCtrl">
+    
+<script src="lib/common/jquery.min.js"></script>
+
+<ion-header-bar class="bar-dark">
+    
+    <button class="button button-icon" ng-click="goBack()">
+        Back
+    </button>
+    
+    <h1 class="title">Contact Details</h1>
+    
+    <button class="button button-icon" ng-click="editContact()">
+        Edit
+    </button>
+</ion-header-bar>
+
+<ion-content class="background_img">
+    
+    <form ng-submit="contactList(display)" class="bg_transp">
+        <div class="header_menu">
+            <div class="cnt_det_img"><img src="img/contact_detail_icon.png" /></div>
+            <div class="menu_wrap">
+                <div class="crt_oppu" ng-click="createOppurtunity()"><img src="img/create_opportunity_unselected.png" /><p>Create<br /> Oppurnity</p></div>
+                <div class="sch_meet" ng-click="scheduleMeeting()"><img src="img/schedule_meeting_unselected.png" /><p>Schedule <br/> Meeting</p></div>
+                <div class="soc_net" ng-click="listSocialNetwork()"><img src="img/social_network_unselected.png" /><p>Social<br />  Network</p></div>
+                <div class="del_cnt" ng-click="deleteContact()"><img src="img/delete_contact_unselected.png" /><p>Delete <br /> Contact</p></div>
+            </div>
+        </div>
+        <div class="list contact_disp_list contact_display_bg">
+            <label class="item-input item-stacked-label">
+                <span class="input-label cont_det_label">First Name</span>
+                <p class="contact_display" id="firstNameData">Satya</p>
+                
+            </label>
+            <label class="item-input item-stacked-label">
+                <span class="input-label cont_det_label">Last Name</span>
+                <p class="contact_display">Nadella</p>
+            </label>
+            <label class="item-input item-stacked-label">
+                <span class="input-label cont_det_label">Phone</span>
+                <p class="contact_display">+1 425 882 8080</p>
+            </label>
+            <label class="item-input item-stacked-label">
+                <span class="input-label cont_det_label">Mobile</span>
+                <p class="contact_display">N/A</p>
+            </label>
+            <label class="item-input item-stacked-label">
+                <span class="input-label cont_det_label">Email ID</span>
+                <p class="contact_display">satyan@microsoft.com</p>    </label>
+            <label class="item-input item-stacked-label">
+                <span class="input-label cont_det_label">Address1</span>
+                <p class="contact_display">N/A</p>
+            </label>
+            <label class="item-input item-stacked-label">
+                <span class="input-label cont_det_label">Address2</span>
+                <p class="contact_display">N/A</p>
+            </label>
+            <label class="item-input item-stacked-label">
+                <span class="input-label cont_det_label">Company</span>
+                <p class="contact_display">Microsoft</p>
+            </label>
+        </div>		
+    </form>
+    
+    
+</ion-content>
+</div>
+
+
+<!--                 <p id="firstNameData" class="contact_display" ng-model="testDataName" ng-change="showUserPro()">Satya {{testDataName}}</p>
+-->

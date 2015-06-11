@@ -1,0 +1,43 @@
+<div ng-controller='srctrl'>
+<ion-header-bar class="bar-dark">
+    
+    <button class="button button-icon" ng-click="toggleProjects()">
+        <i class="icon ion-navicon"></i>
+    </button>
+    
+    <h1 class="title">Service Request</h1>
+    
+  
+</ion-header-bar>
+<ion-content class="background_img">
+
+<div class="panel-heading" style="background-color : White; border-color: grey; color : black;font-weight:bold">Service Request List</div>
+<form class="bg_transp" ng-submit="contactList(display)">
+     <div class="list">
+        <ul>
+        
+        <a class="item no-item-avatar" data-ng-repeat="srlist in srlist">
+            <div>
+            <h2 style = "font-weight : bold"><span style = "color : black; font-weight : bold">SR # :</span> {{srlist.SRNumber}}</h2>
+			
+			<h2 style = "font-weight : bold"><span style = "color : black; font-weight : bold">Type :</span> {{srlist.LXKMPSSRType}}</h2>
+			
+            <h2 style = "font-weight : bold"><span style = "color : black; font-weight : bold">Status :</span> {{srlist.LXKMPSSRStatus}}</h2>
+			
+			<h2 style = "font-weight : bold"><span style = "color : black; font-weight : bold">Area :</span> {{srlist.LXKMPSSRArea}}</h2>
+
+            <h2 style = "font-weight : bold"><span style = "color : black; font-weight : bold">Sub Area :</span> {{srlist.LXKMPSSRSubArea}}</h2>
+
+            <h2 style = "font-weight : bold"><span style = "color : black; font-weight : bold">Service Address :</span> {{srlist.LXKMPSServiceAddressName}}</h2>
+
+            <p class="rgt_arrow arrow_prop"></p>        
+            </div>        
+        </a>
+        
+        </ul>
+        </div>
+        <div ng-include='dvcdiv'></div>
+    </form> 
+
+</ion-content>
+</div>

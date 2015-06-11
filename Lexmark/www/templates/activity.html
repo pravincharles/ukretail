@@ -1,0 +1,38 @@
+<div ng-controller='activityctrl'>
+<ion-header-bar class="bar-dark">
+    
+    <button class="button button-icon" ng-click="toggleProjects()">
+        <i class="icon ion-navicon"></i>
+    </button>
+    
+    <h1 class="title">Activities</h1>
+    
+  
+</ion-header-bar>
+<ion-content class="background_img">
+
+<div class="panel-heading" style="background-color : White; border-color: grey; color : black;font-weight:bold">Activity List</div>
+<form class="bg_transp" ng-submit="contactList(display)">
+     <div class="list">
+        <ul>
+        
+        <a ng-click = "actidetail($index)" class="item no-item-avatar" data-ng-repeat="srlist in activitylist">
+            <div>
+            <h2 style = "font-weight : bold"><span style = "color : black; font-weight : bold">Activity# :</span> {{srlist.ActivityUID}}</h2>
+            <h2 style = "font-weight : bold"><span style = "color : black; font-weight : bold">Type :</span> {{srlist.Type}}</h2>
+
+            <p>{{srlist.Status}}</p>
+
+            <p>{{srlist.Comment}}</p>
+
+            <p class="rgt_arrow arrow_prop"></p>        
+            </div>        
+        </a>
+        
+        </ul>
+        </div>
+        <div ng-include='dvcdiv'></div>
+    </form> 
+
+</ion-content>
+</div>

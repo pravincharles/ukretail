@@ -1,0 +1,61 @@
+
+<ion-header-bar class="bar-dark">
+    
+    <button class="button button-icon" ng-click="toggleProjects()">
+        <i class="icon ion-navicon"></i>
+    </button>
+    
+    <h1 class="title">Contacts</h1>
+    
+    <!-- New Task button-->
+  <button class="button button-icon" ng-click="newTask()">
+        <i class="icon icon_addcnt"></i>
+    </button>
+</ion-header-bar>
+
+<ion-content class="background_img">
+    <form ng-submit="contactList(display)" class="bg_transp">
+        <div class="bar bar-header item-input-inset">
+            <label class="item-input-wrapper">
+                <img src="img/search_icon.png" class="search_icon"/>
+                <input type="search" placeholder="Search" class="rounded_addtask" ng-model="search"/>
+            </label>
+        </div>
+        <div class="list">
+            <ul>
+                
+                
+                <a class="item item-avatar cnt_img" data-ng-repeat="contact in contacts | orderBy:'FirstName' | filter: search" ng-click="showContactDetails(contact)">
+                    <div class="rgt_arrow">
+                        <h2 class="margin-left98">{{contact.FirstName}} {{contact.LastName}}</h2>
+                        <p>{{contact.JobTitle}} <span ng-show="contactComma(contact)"> / </span> {{contact.AccountName}}</p>
+                        <p>{{contact.EmailAddress}} <span ng-show="contactBackslash(contact)"> / </span>  {{contact.Status}}</p>
+                        <p>{{contact.PrivacyCode}}</p>
+                    </div>
+                    
+                </a>
+                <!--
+                 
+                 <a class="item item-avatar cnt_img"  ng-click="showContactDetails(contact)">
+                 <div class="rgt_arrow">
+                 <h2 class="margin-left98">Sample data</h2>
+                 <p>engineer, Wipro</p>
+                 <p>44775585855,  4456664444</p>
+                 <p>test@test.com</p>   
+                 </div>     
+                 
+                 </a>   
+                 -->
+                
+                
+                
+                
+                
+            </ul>
+        </div>
+    </form>
+</ion-content>
+
+
+
+

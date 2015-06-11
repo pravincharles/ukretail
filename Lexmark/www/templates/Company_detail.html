@@ -1,0 +1,66 @@
+
+
+  
+<!--  
+   Contents of selected menu item
+  -->    
+  <ion-header-bar class="bar-dark"><img src="img/back_arrow_white.png"/>
+
+  <button class="button button-icon" ng-click="goBack()">
+     Back
+  </button>
+
+    <h1 class="title">Company Details</h1>
+	<button class="button button-icon" ng-click="">
+     Edit
+  </button>
+
+    <!-- New Task button-->
+    
+    </ion-header-bar>
+
+    <ion-content class="background_img">
+	<form ng-submit="contactList(display)">
+		<div class="list">
+		<ul>
+		
+		<a class="item " href="#">
+			<div class="lft_algn marbtm-20"><img src="img/leftBanner.png" class="lbimg"/></div>
+			<p class="rht_algn padleft30">Generic Electric</p>
+			<p class="rt_aln padleft30">Contact Person</p>
+			<p class="txt_dis padleft30">Ronald Woodm</p>
+			<p class="txt_algn padleft30">CEO</p>
+			<p class="txt_disp padleft30">Manufacturing</p>			
+			</a>
+			
+			<div class="item no-item-avatar bkgd" href="#">
+				<div class="width50 flt-left" ng-click="showCreateOpportunity()">
+            <p class="co_txt">Create Opportunity</p>
+            <span><img src="img/contact_details_icon1.png" class="marleft-20"/></span>
+        </div>
+        <div class="width50 flt-left" ng-click="showSocialNewtwork()">
+			<p class="sn_txt">Social Network</p>
+                <span><img src="img/contact_details_icon3.png" class="snimg"/></span>
+            </div>
+                </div>
+						
+		
+
+		 <a class="item item-avatar coverageBg ht89">
+                 <div class="phone_img "><img src="img/phone.png"/></div>
+
+		 	<h2 class="clr pdtp17">808 909 1010</h2>
+		 </a>
+		  <a class="item item-avatar coverageBg ht89">
+                      <div class="mobile_img"><img src="img/mobile.png"/></div>
+		 	<h2 class="clr pdtp17">9020 909 2345</h2>
+		 </a>
+		 
+		  <a class="item item-avatar clr  coverageBg ht89">
+            <div class="mail_img"><img src="img/mail.png"/></div>
+		 	<h2 class="clr padtp12">ronald@g.com,</h2>
+			<h2 class="clr">ceoronald@g.com</h2>
+		 </a>
+		</div>
+	</form>
+ </ion-content>

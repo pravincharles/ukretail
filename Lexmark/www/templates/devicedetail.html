@@ -1,0 +1,164 @@
+<div>
+<ion-header-bar class="bar-dark">
+    
+    <button class="button button-icon" ng-click="goBack()">
+        <i>Back</i>
+    </button>
+    <h1 class="title">Device Detail</h1>
+    
+    <!-- New Task button-->
+    <button class="button button-icon">
+        <i>Edit</i>
+    </button>
+</ion-header-bar>
+<ion-content class="background_img">
+<div class="row" style="margin-left: 0px !important">
+  <div class="col">
+<div class="list">
+  <label class="item item-input item-stacked-label" style = "background-color:rgb(152, 197, 152)">
+    <span class="input-label">Serial Number</span>
+    <input readonly type="text" style="margin-left:0; background-color:rgb(152, 197, 152)" value = {{bardetail.SerialNumber}}>
+  </label>
+ </div>
+</div>
+  <div class="col">
+<div class="list">
+  <label class="item item-input item-stacked-label" style = "background-color:rgb(240, 177, 177)">
+    <span class="input-label">Account</span>
+    <input readonly type="text" style="margin-left:0px; background-color:rgb(240, 177, 177)" value = {{bardetail.AccountName}}>
+  </label>
+ </div>
+
+  </div>
+</div>
+<div class="row" style="margin-left: 0px !important">
+  <div class="col">
+<div class="list">
+  <label class="item item-input item-stacked-label" style = "background-color:rgb(87, 158, 208)">
+    <span class="input-label">Device Phase</span>
+    <input  readonly type="text" style="margin-left:0px; background-color:rgb(87, 158, 208)" value = {{bardetail.DevicePhase}}>
+  </label>
+ </div>
+</div>
+  <div class="col">
+<div class="list">
+  <label class="item item-input item-stacked-label" style = "background-color:rgb(255, 255, 144)">
+    <span class="input-label">Brand</span>
+    <input  readonly type="text" style="margin-left:0px; background-color:rgb(255, 255, 144)" value = {{bardetail.Brand_MFGProduct}}>
+  </label>
+ </div>
+
+  </div>
+</div>
+<div class="container-fluid">
+   <div class="panel panel-primary">
+   	<div class="panel-heading" style="background-color : White; border-color: grey; color : black;font-weight:bold">Service Request
+   		<span class="pull-right"> <button style="color:white; background-color: grey" ng-click="showSRModal()">Create SR </button></span>
+   	</div>
+    <ul class="nav nav-pills">
+      <li role="presentation" ng-class='srallclass'><a  ng-click='allsr()'>All</a></li>
+      <li role="presentation" ng-class='sropenclass'><a ng-click='opensr()'>Open</a></li>
+      <li role="presentation" ng-class='srclosedclass'><a ng-click='closedsr()'>Closed</a></li>
+      
+    </ul>   
+    
+    <div class="table-responsive"> 
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>SR #</th>
+                <th>Type</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="srlist in srlist" >
+                <td>{{srlist.SRNumber}}</td>
+                <td>{{srlist.LXKMPSSRType}}</td>
+                <td>{{srlist.LXKMPSSRStatus}}</td>
+            </tr>
+        </tbody> 
+    </table>
+       </div>
+    
+</div>
+</div>
+</ion-content>
+</div>
+<script id="newSRmodal.html" type="text/ng-template" ng-controller="devicedetailctrl">
+  <div class="modal modal_addtask ">
+    <ion-content>
+      <form ng-submit="createTask(task)">
+    <div class="SRmodal">
+         <table >
+         <tr> 
+        <td> Serial Number :
+        </td>
+        <td>
+          {{deviceSN}}
+        </td>
+      </tr>
+      <tr><td>&nbsp</td></tr>
+          <tr> 
+        <td> Priority :
+        </td>
+        <td>
+          <select id="SRPriority">
+            <option value="1-ASAP">1-ASAP</option>
+            <option value="2-High">2-High</option>
+            <option value="3-Medium">3-Medium</option>
+            <option value="4-Low">4-Low</option>
+          </select>
+        </td>
+      </tr>
+      <tr><td>&nbsp</td></tr>
+
+
+      <tr> 
+        <td> Type :
+        </td>
+        <td>
+          <select id="SRType">
+            <option value="Consumables Management">Consumables Management</option>
+            <option value="Fleet Management">Fleet Management</option>
+          </select> 
+        </td>
+      </tr> 
+      <tr><td>&nbsp</td></tr>
+
+      <tr> 
+        <td> Area :
+        </td>
+        <td>
+          <select id="SRArea">
+            <option value="Consumable SVC Parts Request">Consumable SVC Parts Request</option>
+            <option value="Consumables Supplies Request">Consumables Supplies Request</option>
+            <option value="Install">Install</option>
+          </select>
+        </td>
+      </tr>
+      <tr><td>&nbsp</td></tr>
+
+      <tr> 
+        <td> Sub Area :
+        </td>
+        <td>
+          <select id="SRSubArea">
+            <option value="Catalog Request">Catalog Request</option>
+            <option value="Asset-Specific Request">Asset-Specific Request</option>
+            <option value="BAU">BAU</option>
+          </select>
+        </td>
+      </tr>
+      <tr><td>&nbsp</td></tr>
+
+      <tr> <td> Summary :
+        </td><td> <input type="text" id="SRSummary"> </input> </td> </tr> 
+        <tr><td>&nbsp</td></tr>
+      <tr> <td>&nbsp</td><td> <Button class="btn btn-primary" ng-click="SaveSR()" > Save </Button> </td> </tr>
+        </table>
+    </div>
+      </form>
+    </ion-content>
+  </div>
+</script>

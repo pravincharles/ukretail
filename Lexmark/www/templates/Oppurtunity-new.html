@@ -1,0 +1,69 @@
+<ion-header-bar class="bar-dark">
+    
+    <button class="button button-icon" ng-click="goBack()">
+        Cancel
+    </button>
+    
+    <h1 class="title">New Opportunity</h1>
+    
+    <!-- New Task button-->
+    <button class="button button-icon" ng-click="saveOpportunity()">
+        Save
+    </button>
+</ion-header-bar>
+<ion-content class="background_img">
+    <form ng-submit="contactList(display)">
+        <div class="list">
+            <label class="item item-input item-stacked-label NoBorder margin-btm20">
+                <span class="input-label btxt">Company</span>
+                <input type="text" id="content" class="search rounded_addtask" placeholder="Search"  >
+                    <img class="search_icon1" src="img/search_icon.png"></img>
+                    </label>
+            <label class="red-txt" >
+                And Or
+            </label>
+            <label class="item item-input item-stacked-label NoBorder">
+                <span class="input-label btxt">Contact</span>
+                <input type="text" id="content" class="search rounded_addtask" placeholder="Search">
+                    <img class="search_icon1" src="img/search_icon.png"></img>
+                    </label>
+            <label class="item item-input item-stacked-label NoBorder">
+                <span class="input-label btxt">Opportunity Name</span>
+                <input type="text" id="content" placeholder="" class="rounded_addtask">
+                    </label>
+            <label class="item item-input item-stacked-label NoBorder">
+                <span class="input-label btxt">Product</span>
+                <input type="text" id="content" placeholder="" class="rounded_addtask">
+                    </label>
+            <label class="item item-input item-stacked-label NoBorder">
+                <span class="input-label btxt">Revenue</span>
+                <input type="text" id="content" placeholder="" class="rounded_addtask">
+                    </label>
+            <label class="item item-input item-stacked-label NoBorder">
+                <span class="input-label btxt">Sales Stage</span>
+                <input type="text"  id="content" class="email rounded_addtask" placeholder="">
+                    <img class="search_icon1" src="img/drop_down_arrow.png"></img>
+                    </label>
+            <label class="item item-input item-stacked-label NoBorder">
+                <span class="input-label btxt">Close Date</span>
+                <input type="text"  id="content" class="email rounded_addtask" placeholder="">
+                    <img class="search_icon1" src="img/closedate.png"></img>
+                    </label>
+        </div>		
+    </form>
+    
+    
+</ion-content>
+<script id="saved.html" type="text/ng-template">
+    
+    <!-- Modal content area -->
+    <ion-content>
+    
+    <form ng-submit="createTask(task)">
+    <button type="submit" class="button button-block button-positive">Saved Successfully</button>
+    </form>
+    
+    </ion-content>
+    
+    </script>
+

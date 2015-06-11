@@ -1,0 +1,76 @@
+
+<div ng-controller="SaveContactCtrl">
+<ion-header-bar class="bar-dark">
+
+<button class="button button-icon" ng-click="goBack()">
+        Back
+</button>
+    <h1 class="title">New Contact</h1>
+
+  <button class="button button-icon" ng-click="submitContact()" >
+        Save
+ </button>
+ </ion-header-bar>
+
+ <ion-content class="background_img">
+  <form name="ContactForm" id="ContactFormRecord" class="bg_transp" novalidate> 
+    <div class="list">
+  <label class="item-input item-stacked-label">
+    <span class="input-label">First Name</span>
+    <input type="text" class="content" id="firstname" placeholder="" value={{contact.firstname}} required> </input>
+		<input type="text" id="contactid"  ng-model="contactdetails.ContactId" style="width:0px;height:0px">
+  </label>
+  <label class="item-input item-stacked-label">
+    <span class="input-label">Last Name</span>
+    <input type="text" class="content" id="lastname" placeholder="" value={{contact.lastname}} required> </input>
+  </label>
+  <label class="item-input item-stacked-label">
+    <span class="input-label">Phone</span>
+    <input type="text" class="content" id="phone" placeholder="" value={{contact.phone}}  required> </input>
+  </label>
+   <label class="item-input item-stacked-label">
+    <span class="input-label">Mobile</span>
+    <input type="text" class="content" id="mobile" placeholder="" name="mobile" value={{contact.mobile}}  required> </input>
+  </label>
+  <label class="item-input item-stacked-label">
+    <span class="input-label">Email ID</span>
+    <input type="text" class="content" id="emailid" placeholder="" value={{contact.emailid}} required> </input>
+  </label>
+  <label class="item-input item-stacked-label">
+    <span class="input-label">Address1</span>
+    <input type="text" class="content"  id="subaddress" placeholder="" value={{contact.subaddress}} required> </input>
+  </label>
+   <label class="item-input item-stacked-label">
+    <span class="input-label">Address2</span>
+    <input type="text"  class="content" id="mainaddress" placeholder="" value={{contact.mainaddress}} required> </input>
+  </label>
+   <label class="item-input item-stacked-label">
+    <span class="input-label">Company</span>
+    <input type="text" class="content" id ="company" placeholder="" value={{contact.company}} required> </input>
+  </label>
+</div>    
+  </form> 
+    </ion-content>
+</div>
+
+
+
+<script id="new-task.html" type="text/ng-template" ng-controller="TodoCtrl">
+  <div class="modal modal_addtask">
+    <ion-content>
+      <form ng-submit="createTask(task)">
+        <div class="add_menu">
+            <div class="phn_book" ng-click="listPhoneContacts()"> <img src="img/phonebook.png"/> <p>Phonebook</p></div>
+            <div class="scan_card" ng-click="scanBusinessCard()"> <img src="img/scancard.png"/> <p> Scan Business Card</p></div>
+            <div class="manual_im" ng-click="enterBusinessContact()"> <img src="img/manually.png"/><p> Enter Manually</p></div>
+            <div class="cancel_menu" ng-click="closeContactPopup()"> <img src="img/Cnacel.png"/> <p> Cancel&nbsp;</p></div> 
+        </div>
+      </form>
+    </ion-content>
+  </div>
+</script>
+
+
+
+
+

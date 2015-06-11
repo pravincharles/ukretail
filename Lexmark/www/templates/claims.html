@@ -1,0 +1,187 @@
+<div ng-controller="claimctrl">
+<ion-header-bar class="bar-dark">
+    
+    <button class="button button-icon" ng-click="toggleProjects()">
+        <i class="icon ion-navicon"></i>
+    </button>
+    
+    <h1 class="title">Maps</h1>
+    
+    <!-- New Task button-->
+</ion-header-bar>
+
+<ion-content class="background_img">
+
+<div class="page" style="background: url('./img/bg.jpg');background-size: 100% 100%;background-repeat: no-repeat;height:auto;min-height:100%;" cg-busy="{promise:QuotePromise,templateUrl:'custom-template.html',message:'Siging-In \n Please Wait...',backdrop:'false',delay:0,minDuration:0}">
+	<div  style="background: url('./img/header.png');background-size: 100% 100%;background-repeat: no-repeat;" ng-init = "ordertab.tab1='active'">
+		<div class="row" style="background:rgb(65, 88, 110);margin-top:-3%;max-height:40px">
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" style="padding:1%;">
+				
+				<span  style="font-size:15px;color:white;font-weight:bold;padding:1%">Claim List</span>
+			</div>
+<!--
+			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 pull-right" style="padding-right:0%;padding-top:0.75%;" >
+				<form action="" class="search-form">
+					<div class="form-group has-feedback">
+						<label for="search" class="sr-only"><span data-i18n ="Search"></span></label>
+						<input type="text" class="form-control" name="search" id="search" placeholder="search" data-ng-model="ordersQuery">
+						<select class="form-control" id="sel1" data-ng-model="confield">
+							<option><span data-i18n ="First Name"></span></option>
+							<option><span data-i18n ="Last Name"></span></option>
+							<option><span data-i18n ="Id"></span></option>
+						</select>
+						<span class="glyphicon glyphicon-search form-control-feedback" ng-click="callConSearch(ordersQuery,confield)"></span>
+					</div>
+				</form>
+			</div>
+-->
+		</div>
+		<div class="panel-heading" style="background-color : White; border-color: grey; color : black;font-weight:bold">Claims</div>
+		<div class="row" style="padding-top:3%;margin-left:-2%;background:grey">
+			<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1" style="min-height:150px;" ng-click="leftswiped('TileBar2')">
+				<img id="b1" src="./img/arrow_left.png" style="padding-top: 75%;padding-left:0px!important;">
+			</div>
+			<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10"  style="padding-left: 0px !important" >
+				<div class="wrapper">
+					<div id="TileBar2" class="scrolls">
+						<div  id="RecordTumb" class="scrolls-a" ng-repeat="homeOrders in homeOrders | filter :ordersQuery " ng-swipe-right="rightswiped('TileBar2')" ng-swipe-left="leftswiped('TileBar2')">
+							<a style="text-align:center;background:rgb(65, 88, 110)" class="thumbnail-custom" ng-click="ordersDetailclk(homeOrders.ClaimNumber)">
+								
+								<div class="row" style="max-height:80px;min-height;80px;text-overflow: ellipsis;">
+									<!-- <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+										<img  src={{orders.ImageSourcePath}} alt="./img/70_70.gif" style="height:60px;width:60px;padding:2px;border-color:black;border-radius: 52%;">
+									</div> -->
+									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" style="text-overflow: ellipsis;">
+									<span  style="font-size:12px;color:white;font-weight:bolder" class="pull-left">Claim#:{{homeOrders.Id}}</span><br>
+									<span  style="font-size:12px;color:white;font-weight:bolder" class="pull-left">Product:{{homeOrders.LXKHWInstallProductName}}</span><br>
+									   <span style="font-size:12px;color:white;font-weight:bolder" class="pull-left"> Type:{{homeOrders.Type}}</span> <br>
+									</div>
+								</div>
+								<div class="row"   style="font-size:13px;color:white;border:2px solid #ddd;font-weight:bolder;background-color:rgb(65, 88, 110);margin-left:1px;margin-right:1px;overflow:hidden;border-radius: 5%;">
+									<div class="row">
+										<span style="background:none"> <i class="fa fa-flag"></i></span> 
+										
+										{{homeOrders.Status}}
+									</div>
+									
+								</div>
+								
+								
+							<span data-i18n = "More details" style="font-size:12px;color:rgb(154,182,197);padding:2%" class="pull-left"></span> <span class=" pull-right" style="padding:2%;"> <i class="fa fa-caret-down" ></i></span> 
+								</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1" style="min-height:150px;padding-left: 0px !important"  ng-click="rightswiped('TileBar2')">
+				<img id="b2" src="./img/arrow_right.png" style="padding-top: 75%;padding-left: 100%;" >
+			</div>
+		</div>
+	</div>
+	<!-- <div class="row" style="padding:2%;background: url('./img/data_entry_bg_1.png');background-size: 100% 100%;background-repeat: no-repeat;text-align:center;">
+	</div> -->
+	<div class="row" style="padding:2%;margin-left: -2%;" >
+	<div class="col-lg-3 col-md-3 col-xsm-3 col-sm-3 thumbnail" ng-repeat="imgarrs in imgarr">
+	 <img ng-src={{imgarrs}} style="width:250px; height:100px" /></div>
+    
+        </div>
+        <div class="panel-heading-trans" style="background:url('./img/my-opportunity-header.png');background-size: 100% 100%;background-repeat: no-repeat;margin-left: 0%;">
+			<button type="button" class="btn btn-default btn-sm pull-right" ng-click="takePic()">TAKE PIC</button>
+			<button type="button" class="btn btn-default btn-sm pull-right" ng-click="submit()">SUBMIT</button>
+			<strong><span  style="padding:2%;color:white; font-size :20px">Claim Details</span></strong>
+		</div>
+        
+        <Div ng-hide="bar1" class="row" style="padding:2%;margin-left: -2%;">
+			<div class="col-lg-4 col-md-4 col-xsm-4 col-sm-4">
+				<table class="table" style="color:white">	
+					<tbody>
+						<tr>
+							<th style="font-weight:bolder;border:none;color:rgb(12,64,80)"><span>Claim#</span></th>
+							<td style="font-weight:bolder;border:none"><label style="background-color:white;color:grey;min-width:100%;border:1px solid #A3A39F"><span style="padding:1%">{{ordersDetail.ClaimNumber}}</span></label></td>
+						</tr>
+						<tr>
+							<th style="font-weight:bolder;border:none;color:rgb(12,64,80)"><span>Policy#</span></th>
+							<td style="font-weight:bolder;border:none"><label style="background-color:white;color:grey;min-width:100%;border:1px solid #A3A39F"><span style="padding:1%">{{ordersDetail.PolicyNumber}}</span></label></td>
+						</tr>
+						<tr>
+							<th style="font-weight:bolder;border:none;color:rgb(12,64,80)"><span>Loss Date</span></th>
+							<td style="font-weight:bolder;border:none"><label style="background-color:white;color:grey;min-width:100%;border:1px solid #A3A39F"><span style="padding:1%">{{ordersDetail.LossDate}}</span></label></td>
+						</tr>
+						<tr>
+							<th style="font-weight:bolder;border:none;color:rgb(12,64,80)"><span>Loss Desc</span></th>
+							<td style="font-weight:bolder;border:none"><label style="background-color:white;color:grey;min-width:100%;border:1px solid #A3A39F"><span style="padding:1%">{{ordersDetail.LossDescription}}</span></label></td>
+						</tr>
+						<tr>
+							<th style="font-weight:bolder;border:none;color:rgb(12,64,80)"><span>Status</span></th>
+							<td style="font-weight:bolder;border:none"><label style="background-color:white;color:grey;min-width:100%;border:1px solid #A3A39F"><span style="padding:1%">{{ordersDetail.StatusCode}}</span></label></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-lg-4 col-md-4 col-xsm-4 col-sm-4">
+				<table class="table" style="color:white">
+					<tbody>
+						<tr>
+							<th style="font-weight:bolder;border:none;color:rgb(12,64,80)"><span>LossDate</span></th>
+							<td style="font-weight:bolder;border:none"><label style="background-color:white;color:grey;min-width:100%;border:1px solid #A3A39F"><span style="padding:1%">{{ordersDetail.LossDate}}</span></label></td>
+						</tr>
+						<tr>
+							<th style="font-weight:bolder;border:none;color:rgb(12,64,80)"><span>ReportedDate</span></th>
+							<td style="font-weight:bolder;border:none"><label style="background-color:white;color:grey;min-width:100%;border:1px solid #A3A39F"><span style="padding:1%">{{ordersDetail.ReportedDate}}</span></label></td>
+						</tr>
+						<tr>
+							<th style="font-weight:bolder;border:none;color:rgb(12,64,80)"><span>LocationType</span></th>
+							<td style="font-weight:bolder;border:none"><label style="background-color:white;color:grey;min-width:100%;border:1px solid #A3A39F"><span style="padding:1%">{{ordersDetail.LocationType}}</span></label></td>
+						</tr>
+						<tr>
+							<th style="font-weight:bolder;border:none;color:rgb(12,64,80)"><span>City</span></th>
+							<td style="font-weight:bolder;border:none"><label style="background-color:white;color:grey;min-width:100%;border:1px solid #A3A39F"><span style="padding:1%">{{ordersDetail.LossLocationCity}}</span></label></td>
+						</tr>
+						<tr>
+							<th style="font-weight:bolder;border:none;color:rgb(12,64,80)"><span>State</span></th>
+							<td style="font-weight:bolder;border:none"><label style="background-color:white;color:grey;min-width:100%;border:1px solid #A3A39F"><span style="padding:1%">{{ordersDetail.LossLocationState}}</span></label></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-lg-4 col-md-4 col-xsm-4 col-sm-4">
+				<table class="table" style="color:white">
+					<tbody>
+						<tr>
+							<th style="font-weight:bolder;border:none;color:rgb(12,64,80)"><span>Country</span></th>
+							<td style="font-weight:bolder;border:none"><label style="background-color:white;color:grey;min-width:100%;border:1px solid #A3A39F"><span style="padding:1%">{{ordersDetail.LossLocationCountry}}</span></label></td>
+						</tr>
+						<tr>
+							<th style="font-weight:bolder;border:none;color:rgb(12,64,80)"><span>Zip</span></th>
+							<td style="font-weight:bolder;border:none"><label style="background-color:white;color:grey;min-width:100%;border:1px solid #A3A39F"><span style="padding:1%">{{ordersDetail.LossLocationZip}}</span></label></td>
+						</tr>
+						<tr>
+							<th style="font-weight:bolder;border:none;color:rgb(12,64,80)"><span>Address</span></th>
+							<td style="font-weight:bolder;border:none"><label style="background-color:white;color:grey;min-width:100%;border:1px solid #A3A39F"><span style="padding:1%">{{ordersDetail.LossLocationAddress}}</span></label></td>
+						</tr>
+						<tr>
+							<th style="font-weight:bolder;border:none;color:rgb(12,64,80)"><span>County</span></th>
+							<td style="font-weight:bolder;border:none"><label style="background-color:white;color:grey;min-width:100%;border:1px solid #A3A39F"><span style="padding:1%">{{ordersDetail.LossLocationCounty}}</span></label></td>
+						</tr>
+						<tr>
+							<th style="font-weight:bolder;border:none;color:rgb(12,64,80)"><span>Loss Type Code</span></th>
+							<td style="font-weight:bolder;border:none"><label style="background-color:white;color:grey;min-width:100%;border:1px solid #A3A39F"><span style="padding:1%">{{ordersDetail.LossTypeCode}}</span></label></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+	
+</div>
+	</ion-content>
+</div>

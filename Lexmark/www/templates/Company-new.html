@@ -1,0 +1,76 @@
+<ion-header-bar class="bar-dark">
+
+<button class="button button-icon" ng-click="goBack()">
+        Cancel
+      </button>
+
+    <h1 class="title">Create Company</h1>
+
+    <!-- New Task button-->
+     <button class="button button-icon" ng-click="alertDevelopment()">
+        Save
+      </button>
+    </ion-header-bar>
+    <ion-content class="background_img">
+	<form ng-submit="contactList(display)">
+		<div class="list"> 
+  <label class="item item-input item-stacked-label NoBorder">
+    <span class="input-label btxt">Company</span>
+    <input type="text" id="content" class="search rounded_addtask" placeholder="Search"  >
+     </label>
+    <label class="item item-input item-stacked-label NoBorder">
+    <span class="input-label btxt">Contact</span>
+    <input type="text" id="content" class="search rounded_addtask" placeholder="Search">
+  </label>
+  <label class="item item-input item-stacked-label NoBorder">
+    <span class="input-label btxt">Designation</span>
+    <input type="text" id="content" placeholder="" class="rounded_addtask">
+  </label>
+   <label class="item item-input item-stacked-label NoBorder">
+    <span class="input-label btxt">Phone</span>
+    <input type="text" id="content" placeholder="" class="rounded_addtask">
+  </label>
+  <label class="item item-input item-stacked-label NoBorder">
+    <span class="input-label btxt">Mobile</span>
+    <input type="text" id="content" placeholder="" class="rounded_addtask">
+  </label>
+  <label class="item item-input item-stacked-label NoBorder">
+    <span class="input-label btxt">Email</span>
+    <input type="text"  id="content" class="email rounded_addtask" placeholder="">
+  </label>
+    <label class="item item-input item-stacked-label" id="cnt" ng-click="showCoverageTeam()">
+    <input type="text"  class="ct-txt rgt_arrow" value="Coverage Team" >
+  </label>
+</div>		
+	</form>
+   
+
+    </ion-content>
+
+    <!--
+<script id="new-task.html" type="text/ng-template">
+
+
+    <ion-content>
+	
+      <form ng-submit="createTask(task)">
+          <button type="submit" class="button button-block button-positive">Saved Successfully</button>
+      </form>
+
+    </ion-content>
+
+</script>
+<script id="new-task.html" type="text/ng-template">
+
+
+    <ion-content>
+	
+      <form ng-submit="createTask(task)">
+          <button type="submit" class="button button-block button-positive">Saved Successfully</button>
+      </form>
+
+    </ion-content>
+
+</script>
+
+-->

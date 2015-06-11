@@ -1,0 +1,46 @@
+<div ng-controller='mapctrl'>
+<ion-header-bar class="bar-dark">
+    
+    <button class="button button-icon" ng-click="toggleProjects()">
+        <i class="icon ion-navicon"></i>
+    </button>
+    
+    <h1 class="title">Maps</h1>
+    
+    <!-- New Task button-->
+</ion-header-bar>
+<ion-content class="background_img" >
+<div class="panel-heading" style="background-color : White; border-color: grey; color : black;font-weight:bold">Maps</div>
+<ui-gmap-google-map center='map.center' zoom='map.zoom' >
+    <!-- <ui-gmap-marker
+        idKey='map.idKey'
+        coords='map.coords'
+       >
+</ui-gmap-marker> -->
+<!--
+       <ui-gmap-marker idKey='map.idKey' coords='map.coords' icon='map.icon' click='map.click' options='map.options'
+        events='map.events' control='map.control'>
+</ui-gmap-marker>
+-->
+
+    <ui-gmap-markers models="randomMarkers" coords="'self'" icon="'icon'" click="'cling'">
+        </ui-gmap-markers>
+
+</ui-gmap-google-map>
+ <form class="bg_transp" ng-submit="contactList(display)">
+     <div class="list">
+        <ul>
+        
+        <a class="item no-item-avatar" data-ng-repeat="devices in devices" ng-click="showasset($index)">
+            <div>
+            <h2 style = "font-weight : bold"><span style = "color : Blue; font-weight : bold">Asset # :</span> {{devices.AssetNumber}}</h2>
+            <h2 style = "font-weight : bold"><span style = "color : Blue; font-weight : bold">Serial # :</span> {{devices.SerialNumber}}</h2>
+            <p class="rgt_arrow arrow_prop"></p>        
+            </div>        
+        </a>
+        
+        </ul>
+        </div>
+    </form>  
+</ion-content>
+</div>
